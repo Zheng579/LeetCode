@@ -6,8 +6,10 @@
 
 // @lc code=start
 function addBinary(a: string, b: string): string {
-    let num = Number(parseInt(a, 2)) + Number(parseInt(b, 2));
-    return num.toString(2);
-};
+    const numA = BigInt("0b" + a);
+    const numB = BigInt("0b" + b);
+    const sum = numA + numB;
+    return sum.toString(2);
+}
 // @lc code=end
 
